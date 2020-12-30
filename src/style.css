@@ -22,13 +22,14 @@ input {
   padding: 0 10px;
   height: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   font-weight: bold;
 }
 
 input[type=submit] {
   background-color: green;
   color: white;
+  border-radius: 0 5px 5px 0;
 }
 
 .search-bar {
@@ -37,7 +38,24 @@ input[type=submit] {
   right: 30px;
 }
 
+.temperature {
+  font-size: 100px;
+  line-height: 105px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: fit-content(500px) 1fr;
+  grid-column-gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .home {
+  background-image: url("./images/clear.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px;
@@ -53,6 +71,10 @@ input[type=submit] {
 
 .home.clear {
   background-image: url("./images/clear.jpg");
+}
+
+.home.sunny {
+  background-image: url("./images/sunny.jpg");
 }
 
 .home-title {
