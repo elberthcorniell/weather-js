@@ -1,6 +1,6 @@
-# Restaurant Js - Frontend
+# Weather Js - Frontend
 
-> An easy way to manage tabs for a restaurant using JavaScript
+> An easy way to search for weather at locations. Built using JavaScript
 
 ![screenshot](./.github/capture.png)
 
@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/elberthcorniell/restaurant-js/tab-feature/dist/index.html)
+[Live Demo Link](https://raw.githack.com/elberthcorniell/weather-js/weather-api/dist/index.html)
 
 ## Getting Started
 
@@ -28,12 +28,12 @@ To get a local copy up and running follow these simple example steps.
 
 1- Clone the repository
 ```
-    git clone https://github.com/elberthcorniell/restaurant-js.git
+    git clone https://github.com/elberthcorniell/weather-js.git
 ```
 
 2- Open the folder on VS Code. 
 ```
-    cd restaurant-js
+    cd weather-js
     code .
 ```
 
@@ -44,9 +44,16 @@ To get a local copy up and running follow these simple example steps.
 
 ### JavaScript Build
 
-1- Run the next on your terminal in the repository folder
+Run the next on your terminal in the repository folder:
+
+- For development:
 ```
     npm run webpack
+```
+
+- For production:
+```
+    npm run build
 ```
 
 
@@ -66,7 +73,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/elberthcorniell/restaurant-js/issues).
+Feel free to check the [issues page](https://github.com/elberthcorniell/weather-js/issues).
 
 ## Show your support
 

@@ -1,4 +1,4 @@
-let tab = 1;
+export const handleData = (data) => ({ ...data.current, ...data.location });
 
 export const createElement = (tag, className = '', content = '') => {
   if (tag === undefined) return false;
@@ -7,9 +7,3 @@ export const createElement = (tag, className = '', content = '') => {
   element.innerHTML = content;
   return element;
 };
-
-export const setTab = (newTab) => {
-  tab = newTab;
-};
-
-export const getTab = () => tab;
