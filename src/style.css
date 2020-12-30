@@ -1,6 +1,6 @@
 h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 70px;
+  font-size: 40px;
 }
 
 button {
@@ -13,13 +13,12 @@ nav {
 }
 
 form {
-  width: 400px;
+  display: flex;
 }
 
 input {
   display: block;
   margin-top: 10px;
-  width: 100%;
   padding: 0 10px;
   height: 40px;
   border: none;
@@ -32,12 +31,28 @@ input[type=submit] {
   color: white;
 }
 
+.search-bar {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
 .home {
-  background-image: url("./images/tuna-salad.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px;
-  height: calc(100vh - 50px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home.partly-cloudy {
+  background-image: url("./images/Partly cloudy.jpg");
+}
+
+.home.clear {
+  background-image: url("./images/clear.jpg");
 }
 
 .home-title {
