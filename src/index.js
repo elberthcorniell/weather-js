@@ -1,4 +1,4 @@
-import { getWeatherData } from './js/api';
+import getWeatherData from './js/api';
 import Home from './js/home';
 import { handleData } from './js/utils';
 
