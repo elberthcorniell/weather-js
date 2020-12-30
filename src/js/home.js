@@ -20,7 +20,7 @@ const Home = (data, { measure = 'C' } = {}) => {
   const temperature = createElement('strong', 'temperature', measure == 'C' ? `${temp_c} <sup>°C</sup>` : `${temp_f} <sup>°F</sup>`);
   const feelslike = createElement('strong', undefined, `Feels like: ${measure == 'C' ? `${feelslike_c} <sup>°C</sup>` : `${feelslike_f} <sup>°F</sup>`}`);
   const humidityText = createElement('strong', undefined, `Humidity: ${humidity}`);
-  
+
   const detailsContainer = createElement('div', 'column');
   detailsContainer.appendChild(feelslike);
   detailsContainer.appendChild(humidityText);
@@ -29,14 +29,22 @@ const Home = (data, { measure = 'C' } = {}) => {
   infoContainer.appendChild(temperature);
   infoContainer.appendChild(detailsContainer);
 
-  const search = createElement('form','search-bar');
+  const search = createElement('form', 'search-bar');
   search.id = 'search';
   const input = createElement('input');
   input.type = 'text';
   input.placeholder = 'location';
   const submit = createElement('input');
   submit.type = 'submit';
-  
+
+  const toggle = createElement('div', 'flex', `
+  <label class="switch">
+    <input type="checkbox" id="measure" ${measure == 'F' ? 'checked' : ''}>
+    <span class="slider round"></span>
+  </label>`);
+  const toggleText = createElement('strong', undefined, '°F');
+  toggle.appendChild(toggleText);
+
   search.appendChild(input);
   search.appendChild(submit);
 
@@ -45,6 +53,7 @@ const Home = (data, { measure = 'C' } = {}) => {
   container.appendChild(title);
   container.appendChild(paragraph);
   container.appendChild(infoContainer);
+  container.appendChild(toggle);
 
   document.getElementById('content').appendChild(container);
 };
