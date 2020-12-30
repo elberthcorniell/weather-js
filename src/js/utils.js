@@ -1,6 +1,4 @@
-export const handleData = (data) => {
-  return { ...data.current, ...data.location };
-}
+export const handleData = (data) => ({ ...data.current, ...data.location });
 
 export const createElement = (tag, className = '', content = '') => {
   if (tag === undefined) return false;

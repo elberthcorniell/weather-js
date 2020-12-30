@@ -11,7 +11,7 @@ const Home = (data, { measure = 'C' } = {}) => {
     name,
     country,
     condition,
-  } = data
+  } = data;
   const className = (condition.text || '').toLowerCase().replace(' ', '-');
   const container = createElement('div', `home ${className}`);
   const title = createElement('h1', undefined, `${name}, ${country}`);
@@ -25,7 +25,7 @@ const Home = (data, { measure = 'C' } = {}) => {
   detailsContainer.appendChild(feelslike);
   detailsContainer.appendChild(humidityText);
 
-  const infoContainer = createElement('div', 'grid')
+  const infoContainer = createElement('div', 'grid');
   infoContainer.appendChild(temperature);
   infoContainer.appendChild(detailsContainer);
 
